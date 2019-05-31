@@ -1,0 +1,24 @@
+// ! import google fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+//! set font variables
+$font-heading: 'Open Sans', sans-serif;
+$font-body: 'Open Sans', sans-serif;
+// Using same font for both, headings will be bold
+
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: $font-body;
+  font-size: 1.6rem;
+  color: $black;
+}
+
+h1 {
+  font-family: $font-heading;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
