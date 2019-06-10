@@ -1,0 +1,10 @@
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: $color5;
+}
+
+input {
+    border: 1px solid $color7;
+    border-radius: 2px;
+}

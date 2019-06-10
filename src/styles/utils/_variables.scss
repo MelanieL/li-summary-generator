@@ -1,19 +1,17 @@
-//? set your brand colors
+$color1: #FFF;
+$color2: #000;
 
-$white: #fff;
+// Background (without gradient)
+$color3: #0077b5;
 
-$light-grey: #fafafa;
-$grey: #d7d7d7;
+// Label colour
+$color4: #66696a;
 
-$black-soft: #444;
-$black: #09090e;
+// Box background
+$color5: #EEE;
 
-$blue: #2c638f;
-$pink: #fff0f5;
-$yellow: #fffacd;
+// Button colour
+$color6: #287bbc;
 
-//? override for project clarity
-
-$color-primary: $blue;
-$color-secondary: $pink;
-$color-tertiary: $yellow;
+// Input border
+$color7: #BFBFBF;
