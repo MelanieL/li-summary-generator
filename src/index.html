@@ -27,21 +27,24 @@
 </head>
 
 <body>
-
-  <main>
+  <header>
     <div class="wrapper">
       <div class="logoImg"><img src="images/logo_linkedin.png" alt="LinkedIn logo"></div>
       <h1 class="siteTitle">Summary Generator</h1>
-      <h2>A simple way to fill in your "About" section on LinkedIn.</h2>
+      <h2>Easily generate content for your "About" section on LinkedIn.</h2>
+    </div>
+  </header>
 
+  <main>
+    <div class="wrapper">
       <form class="form">
         <label for="firstname">First name</label>
         <input type="text" id="firstname" placeholder="Hermione">
 
-        <label for="title">Current (or most recent) title</label>
+        <label for="title">Current/recent title</label>
         <input type="text" id="title" placeholder="Wizard">
 
-        <label for="industry">Current (or most recent) industry</label>
+        <label for="industry">Current/recent industry</label>
         <input type="text" id="industry" placeholder="Wizardry">
 
         <label for="skill1">Field/language/topic you are skilled with (proper noun)</label>
@@ -59,17 +62,24 @@
         <label for="hobby">Hobby (verb, present tense)</label>
         <input type="text" id="hobby" placeholder="reading">
 
-        <label for="like">Something you like (noun)</label>
+        <label for="like">Something you like (noun, proper or common)</label>
         <input type="text" id="like" placeholder="Butterbeer">
 
         <button type="button" class="generateButton">Generate</button>
         <button type="button" class="resetButton">Reset</button>
       </form>
 
-      <div class="summary"></div>
-
     </div>
   </main>
+
+  <section>
+    <div class="wrapper">
+      <div class="summaryCntr">
+        <h3>About</h3>
+        <div class="summary"></div>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
