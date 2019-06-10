@@ -57,8 +57,10 @@ button {
   border: 1px solid $color9;
   margin-top: 15px;
   cursor: pointer;
+  outline: none;
 }
 
 .resetButton {
   background-image: -webkit-linear-gradient(top, $color8 0%, $color4 100%);
 }
+

@@ -1,8 +1,19 @@
 const generateButton = document.querySelector('.generateButton');
 const resetButton = document.querySelector('.resetButton');
 const form = document.querySelector('.form');
+const resultCntr = document.querySelector('.result')
 const generatedSummary = document.querySelector('.summary');
 const answers = [];
+
+function showSummaryCntr() {
+    resultCntr.classList.remove('hide');
+    resultCntr.classList.add('show');
+};
+
+function hideSummaryCntr() {
+    resultCntr.classList.add('hide');
+    resultCntr.classList.remove('show');
+};
 
 function saveAnswer(){
     const firstName = document.getElementById('firstname').value;
@@ -21,16 +32,18 @@ function saveAnswer(){
 
 function generateSummary(){
     const html =
-        `<p>My name is ${answers[0]} and I’m an experienced ${answers[1]} in the ${answers[2]} industry.</p>
-            <p>I specialize in ${answers[3]} and ${answers[4]}. My co-workers would say I’m ${answers[5]} and ${answers[6]}.</p>
-            <p>In my spare time, I enjoy ${answers[7]} and ${answers[8]}.</p>`
+    `<p>My name is ${answers[0]} and I’m an experienced ${answers[1]} in the ${answers[2]} industry.</p>
+    <p>I specialize in ${answers[3]} and ${answers[4]}. My co-workers would say I’m ${answers[5]} and ${answers[6]}.</p>
+    <p>In my spare time, I enjoy ${answers[7]} and ${answers[8]}.</p>`
     generatedSummary.innerHTML = html;
+    showSummaryCntr();
 };
 
 function resetAll() {
     form.reset();
-    generatedSummary.innerHTML = null
+    hideSummaryCntr();
+    generatedSummary.innerHTML = null;
 };
 
-generateButton.addEventListener('click', saveAnswer);
-resetButton.addEventListener('click', resetAll);
+generateButton.addEventListener('click', saveAnswer, showSummaryCntr);
+resetButton.addEventListener('click', resetAll, hideSummaryCntr);

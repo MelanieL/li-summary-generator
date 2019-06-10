@@ -1,0 +1,22 @@
+.result {
+    background-color: $color5;
+}
+
+.summaryCntr {
+    background-color: $color1;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+    margin: 25px 0;
+}
+
+.summary p, .result h3 {
+    margin: 25px 15px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
