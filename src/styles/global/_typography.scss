@@ -19,18 +19,31 @@ body {
 
 h1 {
   font-family: $font-heading;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 600;
   color: $color1;
+  text-align: center;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 400;
   color: $color1;
+  text-align: center;
+  line-height: 1.3;
 }
 
 label {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: $color4;
+}
+
+
+input {
+  font-size: 0.9rem;
+  font-style: italic; 
+}
+
+.siteTitle {
+  margin-bottom: 20px;
 }
