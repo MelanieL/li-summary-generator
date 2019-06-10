@@ -26,15 +26,14 @@ function saveAnswer(){
     const hobby = document.getElementById('hobby').value;
     const like = document.getElementById('like').value;
     answers.push(firstName, title, industry, skill1, skill2, softskill1, softskill2, hobby, like);
-    // console.log(answers);
     generateSummary();
 };
 
 function generateSummary(){
     const html =
-    `<p>My name is ${answers[0]} and I’m an experienced ${answers[1]} in the ${answers[2]} industry.</p>
-    <p>I specialize in ${answers[3]} and ${answers[4]}. My co-workers would say I’m ${answers[5]} and ${answers[6]}.</p>
-    <p>In my spare time, I enjoy ${answers[7]} and ${answers[8]}.</p>`
+        `<p>My name is ${answers[0]} and I’m an experienced ${answers[1]} in the ${answers[2]} industry.</p>
+        <p>I specialize in ${answers[3]} and ${answers[4]}. My co-workers would say I’m ${answers[5]} and ${answers[6]}.</p>
+        <p>In my spare time, I enjoy ${answers[7]} and ${answers[8]}.</p>`
     generatedSummary.innerHTML = html;
     showSummaryCntr();
 };
@@ -45,5 +44,5 @@ function resetAll() {
     generatedSummary.innerHTML = null;
 };
 
-generateButton.addEventListener('click', saveAnswer, showSummaryCntr);
-resetButton.addEventListener('click', resetAll, hideSummaryCntr);
+generateButton.addEventListener('click', saveAnswer);
+resetButton.addEventListener('click', resetAll);
