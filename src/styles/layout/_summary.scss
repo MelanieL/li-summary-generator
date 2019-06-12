@@ -1,12 +1,13 @@
 .result {
     background-color: $color5;
-}
-
-.summaryCntr {
-    background-color: $color1;
+    max-width: 320px;
+    margin: 20px auto;
     border-radius: 3px;
     box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
-    margin: 25px 0;
+}
+
+.summary {
+  margin-bottom: 40px;
 }
 
 .summary p, .result h3 {
