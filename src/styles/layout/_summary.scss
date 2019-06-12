@@ -21,3 +21,11 @@
 .show {
   display: block;
 }
+
+@media (min-width: 500px) {
+  
+  .result {
+    max-width: 400px;
+  }
+
+}
