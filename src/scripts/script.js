@@ -3,6 +3,7 @@ const resetButton = document.querySelector('.resetButton');
 const form = document.querySelector('.form');
 const resultCntr = document.querySelector('.result')
 const generatedSummary = document.querySelector('.summary');
+const input = document.querySelectorAll('.input');
 const answers = [];
 
 function showSummaryCntr() {
@@ -47,3 +48,4 @@ function resetAll() {
 
 generateButton.addEventListener('click', saveAnswer);
 resetButton.addEventListener('click', resetAll);
+// input.addEventListener('change', validateForm);
