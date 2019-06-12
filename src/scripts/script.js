@@ -44,5 +44,6 @@ function resetAll() {
     generatedSummary.innerHTML = null;
 };
 
+
 generateButton.addEventListener('click', saveAnswer);
 resetButton.addEventListener('click', resetAll);
