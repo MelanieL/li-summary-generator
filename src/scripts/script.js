@@ -6,6 +6,11 @@ const generatedSummary = document.querySelector('.summary');
 const input = document.querySelectorAll('.input');
 const answers = [];
 
+// This forces the window to open at the top. Implemented to avoid form reset confusion because page is refreshed.
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
 function showSummaryCntr() {
     resultCntr.classList.remove('hide');
     resultCntr.classList.add('show');
@@ -40,12 +45,9 @@ function generateSummary(){
 };
 
 function resetAll() {
-    form.reset();
-    hideSummaryCntr();
-    generatedSummary.innerHTML = null;
+    location.reload(true);
 };
 
 
 generateButton.addEventListener('click', saveAnswer);
 resetButton.addEventListener('click', resetAll);
-// input.addEventListener('change', validateForm);
