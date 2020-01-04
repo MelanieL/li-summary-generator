@@ -41,39 +41,41 @@
     <div class="wrapper">
       <div class="logoImg"><img src="images/logo_linkedin.png" alt="LinkedIn logo"></div>
       <h1 class="siteTitle">Summary Generator</h1>
-      <h2>Generate some content for your profile's "About" section!</h2>
     </div>
   </header>
-
+  
   <main>
     <div class="wrapper">
       <form class="form">
-        <label for="firstname">First name</label>
-        <input class="input" type="text" id="firstname" placeholder="Hermione">
+        <h3 class="form_instructions">Fill in the fields below to auto-generate a short summary about yourself for your LinkedIn profile.</h3>
+        <label for="firstname">First name *</label>
+        <input class="input" type="text" id="firstname" placeholder="Hermione" required>
 
-        <label for="title">Current / recent title</label>
+        <label for="title">Current / recent title *</label>
         <input class="input" type="text" id="title" placeholder="Wizard">
 
-        <label for="industry">Current / recent industry</label>
+        <label for="industry">Current / recent industry *</label>
         <input class="input" type="text" id="industry" placeholder="Wizardry">
 
-        <label for="skill1">Field / language / topic you're skilled in <br>(proper noun)</label>
+        <label for="skill1">Field / language / topic you're skilled in <br>(proper noun) *</label>
         <input class="input" type="text" id="skill1" placeholder="Arithmancy">
 
-        <label for="skill2">Field / language / topic you're skilled in <br>(proper noun)</label>
+        <label for="skill2">Field / language / topic you're skilled in <br>(proper noun) *</label>
         <input class="input" type="text" id="skill2" placeholder="Charms">
 
-        <label for="softskill1">Soft skill <br>(verb, past tense)</label>
+        <label for="softskill1">Soft skill <br>(verb, past tense) *</label>
         <input class="input" type="text" id="softskill1" placeholder="organized">
 
-        <label for="softskill2">Soft skill <br>(verb, past tense)</label>
+        <label for="softskill2">Soft skill <br>(verb, past tense) *</label>
         <input class="input" type="text" id="softskill2" placeholder="punctual">
 
-        <label for="hobby">Hobby <br>(verb, present tense)</label>
+        <label for="hobby">Hobby <br>(verb, present tense) *</label>
         <input class="input" type="text" id="hobby" placeholder="reading">
 
-        <label for="like">Something you like <br>(noun, proper or common)</label>
+        <label for="like">Something you like <br>(noun, proper or common) *</label>
         <input class="input" type="text" id="like" placeholder="Butterbeer">
+
+        <p class="req_note">* All fields are required.</p>
 
         <button type="button" class="generateButton">Generate</button>
         <button type="button" class="resetButton">Reset</button>
