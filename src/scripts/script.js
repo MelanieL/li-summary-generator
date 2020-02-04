@@ -21,7 +21,11 @@ function hideSummaryCntr() {
     resultCntr.classList.remove('show');
 };
 
+function validateAnswer(fieldValue) {
+};
+
 function saveAnswer(){
+    // Use a for each instead?
     const firstName = document.getElementById('firstname').value;
     const title = document.getElementById('title').value;
     const industry = document.getElementById('industry').value;
@@ -49,5 +53,5 @@ function resetAll() {
 };
 
 
-generateButton.addEventListener('click', saveAnswer);
+generateButton.addEventListener('click', validateAnswer);
 resetButton.addEventListener('click', resetAll);
