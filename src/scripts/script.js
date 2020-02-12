@@ -1,10 +1,9 @@
 const generateButton = document.querySelector('.generateButton');
 const resetButton = document.querySelector('.resetButton');
-const form = document.querySelector('.form');
+const theForm = document.getElementById('form');
 const resultCntr = document.querySelector('.result')
 const generatedSummary = document.querySelector('.summary');
-const input = document.querySelectorAll('.input');
-let answers = [];
+const answers = [];
 
 // This forces the window to open at the top. Implemented to avoid form reset confusion because page is refreshed.
 window.onbeforeunload = function () {
@@ -21,22 +20,10 @@ function hideSummaryCntr() {
     resultCntr.classList.remove('show');
 };
 
-function validateFields() {
-    for (i = 0; i < answers.length; ++i) {
-        if (answers[i] == '') {
-            console.log(answers);
-            alert(
-            "Ooops! Looks like you forgot a field. Please complete the for to get your summary."
-            );
-            // let answers = [];
-            return false;
-        } 
-    }
-    generateSummary();
-};
-
-function saveAnswer() {
+function saveAnswer(event) {
     // Use a for each instead?
+    // event.preventDefault();
+    console.log('Event has submitted');
     const firstName = document.getElementById('firstname').value;
     const title = document.getElementById('title').value;
     const industry = document.getElementById('industry').value;
@@ -47,9 +34,8 @@ function saveAnswer() {
     const hobby = document.getElementById('hobby').value;
     const like = document.getElementById('like').value;
     answers.push(firstName, title, industry, skill1, skill2, softskill1, softskill2, hobby, like);
-    validateFields();
+    generateSummary();
 };
-
 
 function generateSummary(){
     const html =
@@ -64,6 +50,5 @@ function resetAll() {
     location.reload(true);
 };
 
-
-generateButton.addEventListener('click', saveAnswer);
+theForm.addEventListener('submit', saveAnswer);
 resetButton.addEventListener('click', resetAll);
